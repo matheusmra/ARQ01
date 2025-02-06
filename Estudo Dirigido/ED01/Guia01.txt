@@ -1,0 +1,50 @@
+848813 - Matheus de Almeida Moreira - 06/02/25
+01.A)
+A - 27)
+	27 ÷ 2 = 13, resto 1
+	13 ÷ 2 = 6, resto 1
+	6 ÷ 2 = 3, resto 0
+	3 ÷ 2 = 1, resto 1
+	1 ÷ 2 = 0, resto 1
+	R = 11011(2)
+B - 51)
+	51 ÷ 2 = 25, resto 1
+	25 ÷ 2 = 12, resto 1
+	12 ÷ 2 = 6, resto 0
+	6 ÷ 2 = 3, resto 0
+	3 ÷ 2 = 1, resto 1
+	1 ÷ 2 = 0, resto 1
+	R = 110011(2)
+C - 725)
+	725 ÷ 2 = 362, resto 1
+	362 ÷ 2 = 181, resto 0
+	181 ÷ 2 = 90, resto 1
+	90 ÷ 2 = 45, resto 0
+	45 ÷ 2 = 22, resto 1
+	22 ÷ 2 = 11, resto 0
+	11 ÷ 2 = 5, resto 1
+	5 ÷ 2 = 2, resto 1
+	2 ÷ 2 = 1, resto 0
+	1 ÷ 2 = 0, resto 1
+	R = 1011010101(2)
+D - 132)
+	132 ÷ 2 = 66, resto 0
+	66 ÷ 2 = 33, resto 0
+	33 ÷ 2 = 16, resto 1
+	16 ÷ 2 = 8, resto 0
+	8 ÷ 2 = 4, resto 0
+	4 ÷ 2 = 2, resto 0
+	2 ÷ 2 = 1, resto 0
+	1 ÷ 2 = 0, resto 1
+	R = 10000100(2)
+E - 360)
+	360 ÷ 2 = 180, resto 0
+	180 ÷ 2 = 90, resto 0
+	90 ÷ 2 = 45, resto 0
+	45 ÷ 2 = 22, resto 1
+	22 ÷ 2 = 11, resto 0
+	11 ÷ 2 = 5, resto 1
+	5 ÷ 2 = 2, resto 1
+	2 ÷ 2 = 1, resto 0
+	1 ÷ 2 = 0, resto 1
+	R = 101101000(2)
