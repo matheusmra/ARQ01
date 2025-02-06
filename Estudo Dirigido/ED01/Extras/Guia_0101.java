@@ -1,3 +1,4 @@
+// 848813 - Matheus de Almeida Moreira
 public class Guia_0101 {
         public static String dec2bin(int x) {
             return Integer.toBinaryString(x);
