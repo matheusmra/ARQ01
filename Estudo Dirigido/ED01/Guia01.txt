@@ -119,3 +119,55 @@ E - 731(10) )
 	45 ÷ 16 = 2 - Resto = 13 -> D
 	2 ÷ 16 = 0 = Resto = 2
 	R = 2DB
+
+04.A)
+A - 10110(2) )
+	Conversão Binária para Decimal:
+	10110(2) = 1 x 2^4 + 0 x 2^3 + 1 x 2^2 + 1 x 2^1 + 0 x 0^2
+	= 16 + 0 + 4  + 2 + 0
+	R = 22(10)
+	Conversão Decimal para base 4:
+	22 ÷ 4 = 5 - Resto 2
+	5 ÷ 4 = 1 - Resto 1
+	1 ÷ 4 = 0 - Resto 1
+	R = 112(4)
+
+B - 11011(2) )
+	Conversão Binária para Decimal:
+	11011(2) = 1 x 2^4 + 1 x 2^3 + 0 x 2^2 + 1 x 2^1 + 1 x 2^0
+	= 16 + 8 + 0 + 2  + 1
+	R = 27(10)
+	Conversão Decimal para base 8:
+	27 ÷ 8 = 3 - Resto 3
+	3 ÷ 8 = 0 - Resto 3
+	R = 33(8)
+
+C - 100100(2) )
+	Conversão Binaria para Decimal:
+	100100(2) = 1 x 2^5 + 0 x 2^4 + 0 x 2^3 + 1 x 2 ^2 + 0 x 2^1 + 0 x 2^0
+	= 32 + 4
+	R = 36(10)
+	Conversão decimal para base 16:
+	36 ÷ 16 = 2 - Resto 4
+	2 ÷ 16 = 0 - Resto 2
+	R = 24(16)
+D - 101011(2) ) 
+	Conversão Binaria para Decimal:
+	101011(2) = 1 x 2^5 + 0 x 2^4 + 1 x 2^3 + 0 x 2^2 + 1 x 2^1 + 1 x 2^0
+	= 32 + 8 + 2 + 1
+	R = 43(10)
+	Conversão Decimal para base 8:
+	43 ÷ 8 = 5 - Resto 3
+	5 ÷ 8 = 0 - Resto 5
+	R = 53(8)
+
+E - 101100(2) ) 
+	Conversão Binaria para Decimal:
+	101100(2) = 1 x 2^5 + 0 x 2^4 + 1 x 2^3 + 1 x 2^2 + 0 x 2^1 + 0 x 2^0
+	= 32 +8 + 4
+	R = 44(10)
+	Conversão Decimal para base 4:
+	44 ÷ 4 = 11 - Resto 0
+	11 ÷ 4 = 2 - Resto 3
+	2 ÷ 4 = 0 - Resto 2
+	R = 230(4)
