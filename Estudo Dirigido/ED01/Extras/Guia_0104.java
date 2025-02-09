@@ -1,3 +1,4 @@
+// 848813 - Matheus de Almeida Moreira
 public class Guia_0104 {
     public static int bin2dec(String binary) {
         return Integer.parseInt(binary, 2);
