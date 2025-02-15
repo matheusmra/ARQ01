@@ -1,3 +1,4 @@
+// 848813 - Matheus de Almeida Moreira
 public class Guia_0205 {
     public static String dbinEval(String bin1, String op, String bin2) {
         double num1 = bin2dec(bin1);
