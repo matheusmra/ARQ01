@@ -1,5 +1,5 @@
 848813 - Matheus de Almeida Moreira
-
+ 
 01.A)
 A - 0,00101(2) )
     R = 0 x 2^0 + 0 x 2^-1 + 0 x 2^-2 + 1 x 2^-3 + 0 x 2^-4 + 1 x 2^-5
