@@ -3,7 +3,7 @@
 public class Guia_0201 {
     public static double bin2double(String binario) {
         int Index = binario.indexOf(',');
-        if (Index == -1) {
+        if (Index == -1) { 
             Index = binario.length();
         }
         String pInt = binario.substring(0, Index);
