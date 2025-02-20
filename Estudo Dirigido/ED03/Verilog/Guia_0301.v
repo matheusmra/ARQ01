@@ -31,11 +31,11 @@ initial begin : main
     c2_e = ~e + 1;
 
     // Exibir resultados
-    $display("a = %6b -> C1(a) = %6b", a, c1_a);
-    $display("b = %8b -> C1(b) = %8b", b, c1_b);
-    $display("c = %6b -> C2(c) = %6b", c, c2_c);
-    $display("d = %7b -> C2(d) = %7b", d, c2_d);
-    $display("e = %8b -> C2(e) = %8b", e, c2_e);
+    $display("a = %6b(2) -> C1(a) = %6b(2)", a, c1_a);
+    $display("b = %8b(2) -> C1(b) = %8b(2)", b, c1_b);
+    $display("c = %6b(2) -> C2(c) = %6b(2)", c, c2_c);
+    $display("d = %7b(2) -> C2(d) = %7b(2)", d, c2_d);
+    $display("e = %8b(2) -> C2(e) = %8b(2)", e, c2_e);
 end // main
 
 endmodule // Guia_0301
