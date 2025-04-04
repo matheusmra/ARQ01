@@ -4,9 +4,6 @@ module halfAdder ( output carry, output sum, input a, input b );
     and AND0 ( carry, a, b ); 
 endmodule // halfAdder 
 
-// ------------------------- 
-//  full adder 
-// ------------------------- 
 module fullAdder ( output carry, output sum, input a,  input b,  input carryIn ); 
     wire w1,w2,w3;
     halfAdder HA0 ( w1, w2, a, b );
@@ -36,16 +33,11 @@ module Guia_0805;
     wire [4:0] x_c1; // output
     wire [4:0] x_c2; // output
     wire carryOut;
-
     c1 C1 ( x_c1, x );
     c2 C2 ( carryOut, x_c2, x_c1 );
-
-    // Atribuindo valor
     initial begin : start
         x = 5'b00000;
-    end // start
-
-    // ------------------------- parte principal 
+    end 
     initial begin : main 
         $display("Test ALU’s two's complement"); 
         $display( "  x   ->  (±)c2" );
@@ -53,6 +45,6 @@ module Guia_0805;
         for( integer i = 0; i < 32; i++ ) begin
             { x } = i;
             #1;
-        end // for
-    end // main
-endmodule // Guia_0805 
+        end 
+    end 
+endmodule 
