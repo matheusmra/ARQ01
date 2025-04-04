@@ -1,23 +1,20 @@
 
 module halfAdder ( output carry, output sum, input a, input b ); 
-    // descrever por portas 
     xor XOR0 (  sum , a, b ); 
     and AND0 ( carry, a, b ); 
-endmodule // halfAdder 
+endmodule 
 
 module fullAdder ( output carry, output sum, input a,  input b,  input carryIn ); 
-    // descrever por portas e/ou modulos 
     wire w1,w2,w3;
     halfAdder HA0 ( w1, w2, a, b );
     halfAdder HA1 ( w3, sum, w2, carryIn );
     or        OR1 ( carry, w1, w3 );
-endmodule // fullAdder 
+endmodule 
 
 module Guia_0801; 
-    // ------------------------- definir dados 
     reg  [4:0] x; 
     reg  [4:0] y; 
-    wire [4:0] carry; // “vai-um” 
+    wire [4:0] carry;
     wire [5:0] soma; 
 
     // Instancias
