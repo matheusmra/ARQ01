@@ -59,19 +59,13 @@ module Guia_0806;
     wire [5:0] resultado; 
     wire igual; 
     wire diferente; 
-
-
     AU minhaAU ( A, B, carryIn, chave, resultado, igual, diferente );
-
     initial begin 
-
         A = 6'b000000; 
         B = 6'b000000; 
         carryIn = 0; 
         chave = 1; 
     end 
-
-
     initial begin  
         $display("Testando a Unidade Aritmética"); 
         $display("  A   +   B   =  Resultado  | Igual | Diferente"); 
