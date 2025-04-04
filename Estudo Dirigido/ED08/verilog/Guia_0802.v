@@ -1,26 +1,26 @@
 
 module halfDiff ( output carry, output diff, input a, input b ); 
-    // descrever por portas 
+
     wire not_a;
     not NOT0 ( not_a, a );
     xor XOR0 ( diff , a, b ); 
     and AND0 ( carry, not_a, b ); 
-endmodule // halfDiff 
+endmodule 
 
 module fullDiff ( output carry, output diff, input a,  input b,  input carryOut ); 
-    // descrever por portas e/ou modulos 
+    
     wire w1,w2,w3;
     halfDiff HD0 ( w1, w2, a, b );
     halfDiff HD1 ( w3, diff, w2, carryOut );
     or       OR1 ( carry, w1, w3 );
-endmodule // fullDiff 
+endmodule  
 
 
 module Guia_0802; 
-    // ------------------------- definir dados 
+
     reg  [5:0] x; 
     reg  [5:0] y; 
-    wire [5:0] carry; // “vai-um” 
+    wire [5:0] carry; 
     wire [6:0] dif; 
 
     // Instancias
@@ -31,14 +31,10 @@ module Guia_0802;
     fullDiff FD4 ( carry[4], dif[4], x[4], y[4], carry[3] ); 
     fullDiff FD5 ( carry[5], dif[5], x[5], y[5], carry[4] ); 
     assign dif[6] = carry[5];    
-
-    // Atribuindo valores
     initial begin : start
         x = 6'b000000;
         y = 6'b000000;
     end // start
-
-    // ------------------------- parte principal 
     initial begin : main 
         $display("Test ALU’s full difference");  
         $display( "  x   -   y   =   dif" );
@@ -47,6 +43,6 @@ module Guia_0802;
             { x } = i;
             { y } = i;
             #1;
-        end // for
-    end // main
-endmodule // Guia_0802 
+        end 
+    end 
+endmodule 
