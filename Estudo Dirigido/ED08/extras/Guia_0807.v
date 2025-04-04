@@ -6,23 +6,22 @@ endmodule // comparator
 
 
 module LU (
-    input [5:0] A,        // Operando A
-    input [5:0] B,        // Operando B
-    input chave,          // Seleção de saída
-    output reg resultado   // Resultado da comparação
+    input [5:0] A,        
+    input [5:0] B,        
+    input chave,          
+    output reg resultado   
 ); 
-    wire igual;           // Sinal de igualdade
-    wire diferente;       // Sinal de desigualdade
+    wire igual;          
+    wire diferente;       
 
-    // Instância do comparador
+
     comparator comp ( igual, diferente, A, B );
 
-    // Lógica de seleção do resultado
     always @(*) begin
         if (chave) begin
-            resultado = diferente; // Se chave for 1, mostra desigualdade
+            resultado = diferente;
         end else begin
-            resultado = igual; // Se chave for 0, mostra igualdade
+            resultado = igual; 
         end
     end
 
@@ -34,17 +33,15 @@ module Guia_0807;
     reg chave; 
     wire resultado; 
 
-    // Instância da LU
     LU minhaLU ( A, B, chave, resultado );
 
     initial begin 
-        // Definindo os valores iniciais
         A = 6'b000000; 
         B = 6'b000000; 
         chave = 0; 
     end 
 
-    // ------------------------- parte principal 
+ 
     initial begin 
         $display("Testando a Unidade Lógica"); 
         $display(" A    B   |  Resultado | Chave"); 
@@ -52,13 +49,9 @@ module Guia_0807;
             for (integer j = 0; j < 32; j++) begin
                 A = i; 
                 B = j; 
-                
-                // Testando igualdade
                 chave = 0; 
                 #10;
                 $display("%b %b | %b | %b", A, B, resultado, chave);
-                
-                // Testando desigualdade
                 chave = 1; 
                 #10;
                 $display("%b %b | %b | %b", A, B, resultado, chave);
@@ -66,4 +59,4 @@ module Guia_0807;
         end 
         $finish; 
     end 
-endmodule // Guia_0807 
+endmodule 
