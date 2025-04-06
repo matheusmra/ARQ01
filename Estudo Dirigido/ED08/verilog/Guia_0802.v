@@ -2,7 +2,7 @@
 module halfDiff ( output carry, output diff, input a, input b ); 
 
     wire not_a;
-    not NOT0 ( not_a, a );
+    not NOT0 ( not_a, a ); 
     xor XOR0 ( diff , a, b ); 
     and AND0 ( carry, not_a, b ); 
 endmodule 
