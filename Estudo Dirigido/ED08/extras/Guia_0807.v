@@ -2,7 +2,7 @@
 module comparator ( output igual, output diferente, input [5:0] A, input [5:0] B ); 
     assign igual = (A == B);
     assign diferente = (A != B);
-endmodule // comparator 
+endmodule // comparator  
 
 
 module LU (
