@@ -1,7 +1,7 @@
 
 module halfAdder ( output carry, output sum, input a, input b ); 
     xor XOR0 ( sum, a, b ); 
-    and AND0 ( carry, a, b ); 
+    and AND0 ( carry, a, b );  
 endmodule 
 
 module fullAdder ( output carry, output sum, input a, input b, input carryIn ); 
