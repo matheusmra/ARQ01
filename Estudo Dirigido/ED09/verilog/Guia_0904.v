@@ -2,7 +2,7 @@
 // 848813
 // Guia_0904.v- Gerador de pulso com frequência 4x do clock
 
-// incluir o clock
+
 `include "clock.v"
 
 module pulse ( output reg signal, input clock );
