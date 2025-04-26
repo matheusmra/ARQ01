@@ -1,14 +1,10 @@
-// ---------------------------
-// Guia_0905.v
-// Gerador de pulso com marcação de 3 unidades, sincronizado no clock
-// ---------------------------
+// Matheus de Almeida Moreira
+// 848813
+// Guia_0905.v- Gerador de pulso com marcação de 3 unidades, sincronizado no clock
 
-// incluir o clock
+
 `include "clock.v"
 
-// ---------------------------
-// -- pulse generator
-// ---------------------------
 module pulse ( output reg signal, input clock );
 
 initial begin
