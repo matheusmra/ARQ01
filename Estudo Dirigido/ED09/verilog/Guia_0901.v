@@ -1,6 +1,5 @@
 // Matheus de Almeida Moreira
 // 848813
-
 // Guia_0901.v - Geradores de pulso e gatilho
 
 module clock (output reg clk);
