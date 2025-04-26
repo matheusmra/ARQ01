@@ -1,0 +1,81 @@
+$date
+	Sat Apr 26 15:48:08 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Guia_0905 $end
+$var wire 1 ! clk $end
+$upscope $end
+$scope module Guia_0905 $end
+$var wire 1 " pulse_out $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0"
+0!
+$end
+#12
+1"
+1!
+#15
+0"
+#24
+0!
+#36
+1"
+1!
+#39
+0"
+#48
+0!
+#60
+1"
+1!
+#63
+0"
+#72
+0!
+#84
+1"
+1!
+#87
+0"
+#96
+0!
+#108
+1"
+1!
+#111
+0"
+#120
+0!
+#132
+1"
+1!
+#135
+0"
+#144
+0!
+#156
+1"
+1!
+#159
+0"
+#168
+0!
+#180
+1"
+1!
+#183
+0"
+#192
+0!
+#200
