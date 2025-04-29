@@ -1,0 +1,19 @@
+1)
+    ab / cd 00 01 11 10
+    00      0  1  1  0
+    01      1  1  1  0
+    11      0  1  1  0
+    10      0  0  1  1
+    mimtermos = Σ(m1, m3, m4, m5, m7, m10, m11, m13, m15)
+    maxtermos = ∏(m0,m2,m6,m8,m9,m12,m14)
+
+1.a)
+   SoP = a'b'c'd + a'b'cd + a'b c'd' + a'b c'd + a'b c d + a b'c d' + a b'c d + a b c'd + a b c d 
+
+1.b) 
+    PoS = A+B+C+D . A+B+C'+D . A+B'+C'+D . A'+B+C+D . A'+B+C+D' . A'+B'+C+D . A'+B'+C'+D
+
+1.c)
+    SoP = cd + a'bc' + abc + ab'c + a'b'cd'
+
+1.d) PoS = c+d' . a+b'+c . a'+b+c' . a+b+d
