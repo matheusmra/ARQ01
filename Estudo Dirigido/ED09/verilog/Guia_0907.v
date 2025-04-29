@@ -9,7 +9,7 @@ module pulse ( output reg signal, input clock );
 initial begin
     signal = 1'b0;
 end
-
+ 
 always @(clock) begin
     if (clock == 1'b1) begin
         signal = 1'b1;
