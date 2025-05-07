@@ -17,3 +17,16 @@
     SoP = cd + a'bc' + abc + ab'c + a'b'cd'
 
 1.d) PoS = c+d' . a+b'+c . a'+b+c' . a+b+d
+
+
+5) A - 53)
+  53 ÷ 2 = 26, resto 1
+  26 ÷ 2 = 13, resto 0
+  13 ÷ 2 = 6, resto 1
+  6 ÷ 2 = 3, resto 0
+  3 ÷ 2 = 1, resto 1
+  1 ÷ 2 = 0, resto 1
+
+R = 00110101(2)
+R = 11001011(2)
+
