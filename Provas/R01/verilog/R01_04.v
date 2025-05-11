@@ -1,8 +1,5 @@
 // Matheus de Almeida Moreira - 848813
-
-// ------------------------------
-// Expr04: f = ~(~a + (b & c))
-// ------------------------------
+// f = ~(~a + (b & c))
 module Expr04 (
     output f,
     input a, b, c
@@ -17,10 +14,9 @@ module Expr04 (
 
 endmodule
 
-// ------------------------------
-// Expr04_Nand: expressão equivalente com NANDs
+
 // f = ~(~a + (b & c)) usando apenas NAND
-// ------------------------------
+
 module Expr04_Nand (
     output f,
     input a, b, c
@@ -36,9 +32,7 @@ module Expr04_Nand (
 
 endmodule
 
-// ------------------------------
 // Testbench - Exercício 04
-// ------------------------------
 module testbench;
 
     reg a, b, c;
@@ -48,7 +42,7 @@ module testbench;
     Expr04_Nand modB (.f(f04nand), .a(a), .b(b), .c(c));
 
     initial begin
-        $display("Tabela Verdade - Expr04: ~(~a + (b & c))");
+        $display("Tabela Verdade - 04: ~(~a + (b & c))");
         $display(" a b c | f04 ");
         $display("--------|------");
         for (integer i = 0; i < 8; i = i + 1) begin
@@ -57,7 +51,7 @@ module testbench;
             $display(" %b %b %b |  %b", a, b, c, f04);
         end
 
-        $display("\nTabela Verdade - Expr04 com NANDs");
+        $display("\nTabela Verdade - 04 com NANDs");
         $display(" a b c | f04nand ");
         $display("--------|---------");
         for (integer i = 0; i < 8; i = i + 1) begin

@@ -1,8 +1,6 @@
 // Matheus de Almeida Moreira - 848813
 
-// ------------------------------
-// Expr03a: f = (~a & d) | (a & ~b)
-// ------------------------------
+// f = (~a & d) | (a & ~b)
 module Expr03a (
     output f,
     input a, b, d
@@ -19,9 +17,8 @@ module Expr03a (
 
 endmodule
 
-// ------------------------------
-// Expr03b: f = (a'.c'.d)+(a.b')+(b'.d)
-// ------------------------------
+// f = (a'.c'.d)+(a.b')+(b'.d)
+
 module Expr03b (
     output f,
     input a, b, c, d
@@ -42,9 +39,7 @@ module Expr03b (
 
 endmodule
 
-// ------------------------------
 // Testbench - Exercício 03
-// ------------------------------
 module testbench;
 
     reg a, b, c, d;
@@ -54,7 +49,7 @@ module testbench;
     Expr03b modB (.f(f03b), .a(a), .b(b), .c(c), .d(d));
 
     initial begin
-        $display("Tabela Verdade - Expr03a: (~a & d) | (a & ~b)");
+        $display("Tabela Verdade - 03a: (~a & d) | (a & ~b)");
         $display(" a b d | f03a ");
         $display("--------|------");
         for (integer i = 0; i < 8; i = i + 1) begin
@@ -63,7 +58,7 @@ module testbench;
             $display(" %b %b %b |  %b", a, b, d, f03a);
         end
 
-        $display("\nTabela Verdade - Expr03b: (a'.c'.d)+(a.b')+(b'.d)");
+        $display("\nTabela Verdade - 03b: (a'.c'.d)+(a.b')+(b'.d)");
         $display(" a b c d | f03b ");
         $display("-----------|------");
         for (integer i = 0; i < 16; i = i + 1) begin
