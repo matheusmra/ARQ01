@@ -1,0 +1,101 @@
+01.) [Texto] Montar as expressões por mintermos dos flip-flops
+a.) SoP (Da) = Σm(1,4,5,6)= a'b'c + ab'c' + ab'c + abc'
+b) SoP (Ja) =  Σm(1)= a'b'c
+c.) SoP (Ka) = Σm(7) = abc
+d.) SoP (Ta) = Σm(1,7) = a'b'c + abc
+e.) SoP (Db) = Σm(2,5,6,7) = a'bc' + ab'c + abc' + abc
+f.) SoP (Jb) = Σm(5)=ab'c
+g.) SoP (Kb) = Σm(3)=a'bc
+h.) SoP (Tb) =  Σm(3,5)=a'bc + ab'c
+
+02.) [Texto] Montar as expressões por maxtermos dos flip-flops
+a.) PoS (Da) = Πm(0,2,3,7) = (A+B+C)(A+B'+C)(A+B'+C')(A'+B'+C')
+b) PoS (Ja) =  Πm(0,2,3) = (A+B+C)(A+B'+C)(A+B'+C')
+c.) PoS (Ka) = Πm(7) = A'+B'+C'
+d.) PoS (Ta) = Πm(1,7) = (A+B+C')(A'+B'+C')
+e.) PoS (Db) = Πm(0,1,3,4) = (A+B+C)(A+B+C')(A+B'+C')(A'+B+C)
+f.) PoS (Jb) = Πm(5)= (A'+B+C')
+g.) PoS (Kb) = Πm(3)= (A+B'+C')
+h.) PoS (Tb) =  Πm(3,5)= (A+B'+C')(A'+B+C')
+
+03.)
+
+a.)
+AB\C | 0 | 1
+-----|---|---
+00   | 0 | 1
+01   | 0 | 0
+11   | 1 | 0
+10   | 1 | 1 
+SoP (Da) = ab' + ac' + a'b'c
+
+b.)
+
+AB\C | 0 | 1
+-----|---|---
+00   | 0 | 1 
+01   | 0 | 0
+11   | X | 0
+10   | X | X 
+SoP (Sa) = a'b'c
+
+c.)
+
+AB\C | 0 | 1
+-----|---|---
+00   | X | 0
+01   | X | X 
+11   | 0 | 1 
+10   | 0 | 0
+SoP (Ra) = abc
+
+d.)
+
+AB\C | 0 | 1
+-----|---|---
+00   | 0 | 1 
+01   | 0 | 0
+11   | 0 | 1 
+10   | 0 | 0
+SoP (Ta) = a'b'c + abc
+
+e.)
+
+AB\C | 0 | 1
+-----|---|---
+00   | 0 | 0
+01   | X | 0
+11   | X | X 
+10   | 0 | 1 
+
+SoP (Sb) = ab'c
+
+f.)
+
+AB\C | 0 | 1
+-----|---|---
+00   | X | X 
+01   | 0 | 1 
+11   | 0 | 0
+10   | X | 0
+SoP (Rb) = a'bc
+
+g.)
+
+AB\C | 0 | 1
+-----|---|---
+00   | 0 | 0
+01   | X | X 
+11   | X | X 
+10   | 0 | 1 
+SoP (Jb) = ab'c
+
+h.)
+
+AB\C | 0 | 1
+-----|---|---
+00   | X | X 
+01   | 0 | 1 
+11   | 0 | 0
+10   | X | 0
+SoP (Kb) = a'bc
