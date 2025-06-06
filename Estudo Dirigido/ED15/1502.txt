@@ -1,8 +1,5 @@
-// Guia_1502.txt
 // Nome: Matheus de Almeida Moreira
 // Matrícula: 848122
-// Calcular dado05 = dado01 + dado02 - dado03 + dado04
-// Operações com números de 16 bits com sinal (complemento de 2)
 
         LHLD dado01        ; HL <- dado01
         LHLD dado02        ; HL <- dado02

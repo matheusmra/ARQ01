@@ -1,8 +1,5 @@
-// Guia_1504.txt
 // Nome: Matheus de Almeida Moreira
 // Matrícula: 848813
-
-// Calcular dado03 = 2 * (dado01 - 3 * dado02)
 
         LXI  H, dado02     ; HL <- addr(dado02)
         MOV  B, M          ; B <- MEM[dado02]

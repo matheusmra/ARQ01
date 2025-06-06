@@ -1,9 +1,5 @@
-// Guia_1503.txt
 // Nome: Matheus de Almeida Moreira
 // Matrícula: 848813
-
-// Calcular dado05 = dado01 - dado02 - dado03 + dado04
-// Dados em BCD. Usar DAA após cada operação para corrigir resultado BCD.
 
         LXI  H, dado01     ; HL <- addr(dado01)
         MOV  A, M          ; A <- MEM[dado01]

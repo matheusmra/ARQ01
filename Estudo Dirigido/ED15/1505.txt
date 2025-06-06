@@ -1,10 +1,5 @@
-// Guia_1505.txt
 // Nome: Matheus de Almeida Moreira
 // Matrícula: 848813
-
-// Calcular dado03 = dado01 * 8 + dado02 / 2
-// Multiplicação por 8 = 3 somas duplicadas (x2 x2 x2)
-// Divisão por 2 = deslocamento ou soma controlada
 
         LXI  H, dado01     ; HL <- addr(dado01)
         MOV  A, M          ; A <- MEM[dado01]

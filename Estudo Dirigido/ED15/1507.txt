@@ -1,9 +1,5 @@
-// Guia_1507.txt
 // Nome: Matheus de Almeida Moreira
 // Matrícula: 848813
-
-// Calcular dado03 = dado01 % 2 + dado02 / 4
-// DICA: Usar AND 01h para módulo 2, e RAR duas vezes para /4
 
         LXI  H, dado01     ; HL <- addr(dado01)
         MOV  A, M          ; A <- MEM[dado01]
