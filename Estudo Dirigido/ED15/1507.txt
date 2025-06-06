@@ -1,0 +1,24 @@
+// Guia_1507.txt
+// Nome: Matheus de Almeida Moreira
+// Matrícula: 848813
+
+// Calcular dado03 = dado01 % 2 + dado02 / 4
+// DICA: Usar AND 01h para módulo 2, e RAR duas vezes para /4
+
+        LXI  H, dado01     ; HL <- addr(dado01)
+        MOV  A, M          ; A <- MEM[dado01]
+        ANI 01h            ; A = A % 2
+        MOV  B, A          ; B = dado01 % 2
+        LXI  H, dado02     ; HL <- addr(dado02)
+        MOV  A, M          ; A <- MEM[dado02]
+        RAR                ; A = A / 2
+        RAR                ; A = A / 4
+        ANI 7Fh            ; limpar bit de sinal (se necessário)
+        ADD  B             ; A = (dado02 / 4) + (dado01 % 2)
+        STA  dado03        ; resultado final
+        HLT
+
+; Área de dados
+dado01: DB 05h 
+dado02: DB 08h 
+dado03: DB 00h 

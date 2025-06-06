@@ -1,0 +1,29 @@
+// Guia_1503.txt
+// Nome: Matheus de Almeida Moreira
+// Matrícula: 848813
+
+// Calcular dado05 = dado01 - dado02 - dado03 + dado04
+// Dados em BCD. Usar DAA após cada operação para corrigir resultado BCD.
+
+        LXI  H, dado01     ; HL <- addr(dado01)
+        MOV  A, M          ; A <- MEM[dado01]
+        INX  H             ; HL -> dado02
+        MOV  B, M          ; B <- MEM[dado02]
+        SUB  B             ; A = A - B
+        DAA                ; Ajustar para BCD
+        INX  H             ; HL -> dado03
+        MOV  C, M          ; C <- MEM[dado03]
+        SUB  C             ; A = A - C
+        DAA                ; Ajustar para BCD
+        INX  H             ; HL -> dado04
+        ADD M              ; A = A + MEM[dado04]
+        DAA                ; Ajustar para BCD
+        STA  dado05        ; Armazenar resultado
+        HLT                ; Fim
+
+; Área de dados (BCD: 00–99 decimal)
+dado01: DB 29h 
+dado02: DB 14h 
+dado03: DB 05h 
+dado04: DB 10h 
+dado05: DB 00h 

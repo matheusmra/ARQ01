@@ -1,0 +1,27 @@
+// Guia_1505.txt
+// Nome: Matheus de Almeida Moreira
+// Matrícula: 848813
+
+// Calcular dado03 = dado01 * 8 + dado02 / 2
+// Multiplicação por 8 = 3 somas duplicadas (x2 x2 x2)
+// Divisão por 2 = deslocamento ou soma controlada
+
+        LXI  H, dado01     ; HL <- addr(dado01)
+        MOV  A, M          ; A <- MEM[dado01]
+        ADD  A             ; A = 2 * dado01
+        MOV  B, A          ; B = 2 * dado01
+        ADD  B             ; A = 4 * dado01
+        MOV  B, A          ; B = 4 * dado01
+        ADD  B             ; A = 8 * dado01
+        LXI  H, dado02     ; HL <- addr(dado02)
+        MOV  B, M          ; B <- MEM[dado02]
+        RAR                ; divisão por 2 (B -> A)
+        ANI 7Fh            ; limpar bit de sinal se necessário
+        ADD  B             ; A = A + (dado02 / 2)
+        STA  dado03        ; MEM[dado03] <- resultado
+        HLT                ; parar
+
+; Área de dados
+dado01: DB 04h 
+dado02: DB 06h 
+dado03: DB 00h 

@@ -1,0 +1,37 @@
+// Guia_1502.txt
+// Nome: Matheus de Almeida Moreira
+// Matrícula: 848122
+// Calcular dado05 = dado01 + dado02 - dado03 + dado04
+// Operações com números de 16 bits com sinal (complemento de 2)
+
+        LHLD dado01        ; HL <- dado01
+        LHLD dado02        ; HL <- dado02
+        DAD SP             ; salvar SP temporariamente
+        XCHG               ; DE <- dado02
+        LHLD dado01        ; HL <- dado01 novamente
+        DAD D              ; HL += DE (dado01 + dado02)
+        LHLD dado03        ; HL <- dado03
+        MOV D, H
+        MOV E, L
+        CMA                ; A <- ~L
+        MOV L, A
+        MOV A, D
+        CMA
+        MOV H, A
+        INX H              ; HL = -dado03
+        XCHG               ; DE <- -dado03
+        LHLD dado01        ; HL <- dado01
+        DAD D              ; HL = dado01 + dado02 - dado03
+        LHLD dado04        ; HL <- dado04
+        XCHG               ; DE <- dado04
+        LHLD dado01        ; HL <- dado01
+        DAD D              ; HL = resultado final
+        SHLD dado05        ; dado05 <- HL
+        HLT                ; fim
+
+; Área de dados (16 bits, LSB primeiro)
+dado01: DB 03h, 00h 
+dado02: DB 02h, 00h 
+dado03: DB 01h, 00h 
+dado04: DB 04h, 00h 
+dado05: DB 00h, 00h 

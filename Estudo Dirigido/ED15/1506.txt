@@ -1,0 +1,29 @@
+// Guia_1506.txt
+// Nome: Matheus de Almeida Moreira
+// Matrícula: 848813
+
+// Calcular dado03 = 3 * dado01 - 4 * dado02
+
+        LXI  H, dado01     ; HL <- addr(dado01)
+        MOV  A, M          ; A <- MEM[dado01]
+        MOV  B, A          ; B = dado01
+        ADD  B             ; A = A + B (2 * dado01)
+        ADD  B             ; A = A + B (3 * dado01)
+        MOV  C, A          ; C = 3 * dado01
+        LXI  H, dado02     ; HL <- addr(dado02)
+        MOV  A, M          ; A <- MEM[dado02]
+        MOV  B, A          ; B = dado02
+        ADD  A             ; A = 2 * dado02
+        MOV  D, A          ; D = 2 * dado02
+        ADD  B             ; A = 3 * dado02
+        ADD  B             ; A = 4 * dado02
+        MOV  B, A          ; B = 4 * dado02
+        MOV  A, C          ; A = 3 * dado01
+        SUB  B             ; A = A - B
+        STA  dado03        ; resultado
+        HLT
+
+; Área de dados
+dado01: DB 05h 
+dado02: DB 03h 
+dado03: DB 00h 
