@@ -1,0 +1,40 @@
+// Guia_1603.txt
+// 848813 - Matheus de Almeida Moreira
+//
+// Resto da divisão inteira
+// Entrada: 0050h = dado1, 0051h = dado2
+// Saída:   0052h = resto
+
+JMP MAIN
+
+// F_MOD - Function IMOD // A = B % C
+// @return A
+// @param B
+// @param C
+//
+F_MOD:
+    MOV D,B
+    MOV E,C
+M_LOOP:
+    MOV A,D
+    CMP E
+    JC M_RET
+    SUB E
+    MOV D,A
+    JMP M_LOOP
+M_RET:
+    MOV A,D
+    RET
+
+MAIN:
+    LXI H,0050
+    MOV B,M
+    INX H
+    MOV C,M
+    CALL F_MOD
+    STA 0052
+    HLT
+END:
+// dado1: 09h
+// dado2: 04h
+// dado3: 00h

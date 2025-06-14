@@ -1,0 +1,49 @@
+// Guia_1607.txt
+// 848813 - Matheus de Almeida Moreira
+//
+// Calcula o fatorial de um número
+// Entrada: 0050h = dado
+// Saída:   0051h = fatorial
+
+JMP MAIN
+
+// F_FAT - Function FAT // A = fatorial(B)
+// @return A
+// @param B
+//
+F_FAT:
+    MVI A,01
+    MOV C,B
+LOOP:
+    MOV D,A
+    MOV A,C
+    CALL MULT
+    MOV A,D
+    DCR C
+    JNZ LOOP
+    RET
+
+// MULT - Function MULT // A = A * C
+// @return A
+// @param A = acumulador
+// @param C = multiplicador
+//
+MULT:
+    MVI E,00
+    MOV B,A
+    MOV A,E
+M_LOOP:
+    ADD B
+    DCR C
+    JNZ M_LOOP
+    RET
+
+MAIN:
+    LXI H,0050
+    MOV B,M
+    CALL F_FAT
+    STA 0051
+    HLT
+END:
+// dado1: 04h
+// dado2: 00h

@@ -1,0 +1,51 @@
+// Guia_1605.txt
+// 848813 - Matheus de Almeida Moreira
+//
+// Conversão de BCD para hexadecimal
+// Entrada: 0050h = valor em BCD
+// Saída:   0051h = valor em hexadecimal
+
+JMP MAIN
+
+// F_BCDHEX - Function BCD to HEX // A = BCD_to_Hex(B)
+// @return A
+// @param B
+//
+F_BCDHEX:
+    MOV A,B
+    ANI F0h
+    RRC
+    RRC
+    RRC
+    RRC
+    MOV C,A
+    MOV A,B
+    ANI 0Fh
+    MOV B,A
+    MOV A,C
+    MVI D,0Ah
+    CALL MULT
+    ADD B
+    RET
+
+// MULT - Function MULT // A = C * 10
+// @return A
+// @param C = valor em C, multiplicado por D (10)
+//
+MULT:
+    MVI E,00
+M_LOOP:
+    ADD E
+    DCR D
+    JNZ M_LOOP
+    RET
+
+MAIN:
+    LXI H,0050
+    MOV B,M
+    CALL F_BCDHEX
+    STA 0051
+    HLT
+END:
+// dado1: 24h
+// dado2: 00h

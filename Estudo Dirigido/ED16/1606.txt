@@ -1,0 +1,33 @@
+// Guia_1606.txt
+// 848813 - Matheus de Almeida Moreira
+//
+// Calcula o quadrado de um número via soma de ímpares
+// Entrada: 0050h = dado
+// Saída:   0051h = resultado
+
+JMP MAIN
+
+// F_SQR - Function SQR // A = B * B
+// @return A
+// @param B
+//
+F_SQR:
+    MVI C,01
+    MVI A,00
+    MOV D,B
+LOOP:
+    ADD C
+    INR C
+    DCR D
+    JNZ LOOP
+    RET
+
+MAIN:
+    LXI H,0050
+    MOV B,M
+    CALL F_SQR
+    STA 0051
+    HLT
+END:
+// dado1: 05h
+// dado2: 00h

@@ -1,0 +1,39 @@
+// Guia_1601.txt
+// 848813 - Matheus de Almeida Moreira
+//
+// Multiplicação de dois números de 8 bits
+// Entrada: 0050h = dado1, 0051h = dado2
+// Saída:   0052h = resultado
+
+JMP MAIN
+
+// F_MUL - Function IMUL // A = B * C
+// @return A
+// @param B
+// @param C
+//
+F_MUL:
+    MVI A,00
+    MOV D,B
+    MOV E,C
+M_LOOP:
+    CPI 00
+    JZ M_RET
+    ADD D
+    DCR E
+    JMP M_LOOP
+M_RET:
+    RET
+
+MAIN:
+    LXI H,0050
+    MOV B,M
+    INX H
+    MOV C,M
+    CALL F_MUL
+    STA 0052
+    HLT
+END:
+// dado1: 03h
+// dado2: 04h
+// dado3: 00h

@@ -1,0 +1,43 @@
+// Guia_1604.txt
+// 848813 - Matheus de Almeida Moreira
+//
+// Maior valor em um vetor
+// Entrada: 0050h = tamanho, 0051h+ = elementos
+// Saída:   0052h = maior valor
+
+JMP MAIN
+
+// F_MAX - Function MAX // A = max(vetor, tamanho)
+// @return A
+// @param B = tamanho
+// @param HL = endereço inicial do vetor
+//
+F_MAX:
+    MOV A,M
+    DCR B
+    INX H
+LOOP:
+    MOV C,M
+    CMP C
+    JNC SKIP
+    MOV A,C
+SKIP:
+    INX H
+    DCR B
+    JNZ LOOP
+    RET
+
+MAIN:
+    LXI H,0050
+    MOV B,M
+    INX H
+    CALL F_MAX
+    STA 0052
+    HLT
+END:
+// dado0: 04h
+// dado1: 21h
+// dado2: 3Ah
+// dado3: 10h
+// dado4: 2Fh
+// dado5: 00h

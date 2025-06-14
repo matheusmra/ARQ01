@@ -1,0 +1,41 @@
+// Guia_1602.txt
+// 848813 - Matheus de Almeida Moreira
+//
+// Divisão inteira de dois números de 8 bits
+// Entrada: 0050h = dado1, 0051h = dado2
+// Saída:   0052h = quociente
+
+JMP MAIN
+
+// F_DIV - Function IDIV // A = B / C
+// @return A
+// @param B
+// @param C
+//
+F_DIV:
+    MVI A,00
+    MOV D,B
+    MOV E,C
+D_LOOP:
+    MOV B,D
+    CMP E
+    JC D_RET
+    SUB E
+    MOV D,A
+    INR A
+    JMP D_LOOP
+D_RET:
+    RET
+
+MAIN:
+    LXI H,0050
+    MOV B,M
+    INX H
+    MOV C,M
+    CALL F_DIV
+    STA 0052
+    HLT
+END:
+// dado1: 08h
+// dado2: 02h
+// dado3: 00h
