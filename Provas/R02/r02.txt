@@ -1,0 +1,7 @@
+848813 - Matheus de Almeida Moreira
+
+
+02.) Dada a expressão PoS (1,3,6,7)
+a) R = A'B'C' + A'BC' + AB'C' + AB'C 
+   R(A,B,C) = A'C' + AB'
+
