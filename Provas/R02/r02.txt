@@ -1,5 +1,36 @@
 848813 - Matheus de Almeida Moreira
 
+| m  | A | B | x | A⁺ | B⁺ | z | Da | Db | JaKa | JbKb | Ta | Tb |
+| 0  | 0 | 0 | 0 | 0  | 0  | 0 | 0  | 0  | 0    | 0    | 0  | 0  |
+| 1  | 0 | 0 | 1 | 0  | 1  | 0 | 0  | 1  | 0    | 1    | 0  | 1  |
+| 2  | 0 | 1 | 0 | 1  | 0  | 0 | 1  | 0  | 1    | 1    | 1  | 1  |
+| 3  | 0 | 1 | 1 | 0  | 0  | 0 | 0  | 0  | 0    | 1    | 0  | 1  |
+| 4  | 1 | 0 | 0 | 0  | 0  | 0 | 0  | 0  | 1    | 0    | 1  | 0  |
+| 5  | 1 | 0 | 1 | 1  | 1  | 1 | 1  | 1  | 0    | 1    | 0  | 1  |
+
+a) Expressão por mintermos para Da
+
+F(A,B,x) = (A'Bx')+ (AB'x)
+
+b) Expressão por maxtermos para Db
+
+F = (A + B + x)(A + B' + x)(A + B' + x')(A' + B + x)
+
+c) Expressão por mintermos para JaKa 
+
+F(A,B,x) = A'Bx'
+
+d) Expressão por maxtermos para JbKb 
+
+F = (A' + B' + x')(A + B' + x')
+
+e) Expressão por mintermos para Ta
+
+F = A'Bx'
+
+f) Expressão por maxtermos para Tb
+
+F = (A' + B' + x')(A + B' + x')
 
 02.) Dada a expressão PoS (1,3,6,7)
 a) R = A'B'C' + A'BC' + AB'C' + AB'C 
